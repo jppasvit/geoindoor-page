@@ -1,0 +1,133 @@
+body {
+	background-image: url("Imagenes/fondorojo.jpg");
+	background-repeat: repeat;
+	background-size:cover;
+}
+
+.menu {
+	margin-top: 7%;
+	margin-right: 25%;
+	margin-left: 25%;
+	height: 200px;
+    position: relative;
+
+    border-radius: 10px 10px 10px 10px;
+	-moz-border-radius: 10px 10px 10px 10px;
+	-webkit-border-radius: 10px 10px 10px 10px;
+	
+
+	
+    background: rgba(153, 0, 153,0.5);
+
+	-webkit-box-shadow: -1px 2px 73px 16px rgba(148,130,148,1);
+	-moz-box-shadow: -1px 2px 73px 16px rgba(148,130,148,1);
+	box-shadow: -1px 2px 73px 16px rgba(148,130,148,1);
+}
+.verticalcenter {
+	margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    
+    transform: translate(-50%, -50%);
+}
+
+.boton {
+	 height: 50px;
+   	 width: 100%;
+   	 font-size: 1.3em;
+   	 margin: 5px;
+	 border-radius: 10px 10px 10px 10px;
+	-moz-border-radius: 10px 10px 10px 10px;
+	-webkit-border-radius: 10px 10px 10px 10px;
+	background: rgb(191, 191, 191);
+
+
+	font-family: "Courier New", Courier, monospace;
+	font-weight: bold;
+	color: #000000;
+}
+.boton:hover {
+	background: rgba(153, 0, 153);
+	border-color: rgba(153, 0, 153);
+	cursor:pointer;
+}
+.imgboton {
+	height: 27px;
+   	width: 19px;
+   	float: left;
+   	margin-left: 12px;
+   	margin-right: 10px;
+
+}
+.titulo{
+	padding: 20px 0;
+    
+    margin-top: 7%;
+	margin-right: 25%;
+	margin-left: 25%;
+
+    text-align: center;
+
+    border-radius: 10px 10px 10px 10px;
+	-moz-border-radius: 10px 10px 10px 10px;
+	-webkit-border-radius: 10px 10px 10px 10px;
+	
+
+	
+    background: rgba(153, 0, 153,0.5);
+
+	-webkit-box-shadow: -1px 2px 73px 16px rgba(148,130,148,1);
+	-moz-box-shadow: -1px 2px 73px 16px rgba(148,130,148,1);
+	box-shadow: -1px 2px 73px 16px rgba(148,130,148,1);
+	font-family: "Courier New", Courier, monospace;
+	font-weight: bold;
+	font-size: 1.5em;
+	padding-left: 8%;
+
+}
+h1{
+	
+	position: relative;
+	background: rgb(191, 191, 191) !important;
+	width: 80%;
+	 border-radius: 10px 10px 10px 10px;
+	-moz-border-radius: 10px 10px 10px 10px;
+	-webkit-border-radius: 10px 10px 10px 10px;
+
+}
+h1:hover{
+	cursor:pointer;
+}
+
+@media screen and (max-width:820px) {
+    .menu {
+    	margin-right: 0px;
+		margin-left: 0px;
+    }
+    
+    
+    .titulo {
+    	margin-right: 0px;
+		margin-left: 0px;
+		 width: 100%;
+    }
+    .verticalcenter {
+		
+    	left: 45%;
+    }
+}
+
+@media screen and (max-width:346px) {
+    .titulo{
+	
+		font-size: 1em;
+	
+	}
+
+	.boton {
+    	 width: 100%;
+		margin: 0px;
+		font-size: 1em;
+    }
+}
