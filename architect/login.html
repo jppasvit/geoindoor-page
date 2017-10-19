@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html >
+	<head>
+		 <link rel="stylesheet" type="text/css" href="build/css/anyplace.min.css"/>
+		 <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    	 <meta charset="utf-8">
+    	 <script type="text/javascript" src="bower_components/angular/angular.min.js"></script>
+    	 <script src="https://www.gstatic.com/firebasejs/4.1.1/firebase.js"></script>
+    	 <script type="text/javascript" src="controllers/loginPageController.js"></script>
+	</head>
+
+	<body>
+		<div ng-app="loginPage" ng-controller="loginPageController">
+        <!-- <input type="checkbox" ng-model="logeado"> -->
+	        <div >
+	            <h1 class="titLogin">Geoindoor Architect</h1>
+	            <div class="divBtnLogin" >
+	              <button id="login" class="btnLogin" ng-click="loginGoogle()">Login<img class="imgLogin" src="images/architect.png"></button>
+	            </div>
+	        </div>
+
+        </div>
+	</body>
+
+</html>
