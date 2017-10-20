@@ -74,7 +74,7 @@ app.controller("MyDraw",['$scope', '$compile', 'GMapService', 'AnyplaceService',
 		return $http({
 
 		    method: 'POST',
-		    url: "https://geoindoorapi.herokuapp.com/Rutas/Edificio",
+		    url: "https://geoindoorapi.herokuapp.com/Rutas/EdificioArchitect",
 		    headers: {'Content-Type': 'application/x-www-form-urlencoded'},
 		    transformRequest: function(obj) {
 		        var str = [];
