@@ -19,7 +19,7 @@ myapp.controller("loginPageController", function ($scope) {
 	        var token = result.credential.accesstoken;
 	        var user = result.user;
 	        var name = result.user.displayName;
-	        location.href ="https://jppasvit.github.io/architect/";  
+	        location.href ="/architect";  
 	      }).catch(function(error) {
 	      	var errorCode = error.code;
   			var errorMessage = error.message;
@@ -31,7 +31,7 @@ myapp.controller("loginPageController", function ($scope) {
 	  }
 
 	  if(firebase.auth().currentUser){
-	  	location.href ="https://jppasvit.github.io/architect/";
+	  	location.href ="/architect";
 	  }
 	
 	
