@@ -43,7 +43,7 @@ app.controller("loginGeoindoor",['$scope', '$compile', 'GMapService', 'AnyplaceS
         });*/
 	    firebase.auth().signOut().then(function() {
 	      //alert("Saliendo");
-	      location.href ="/architect/login.html";
+	      location.href ="/geoindoor-page/architect/login.html";
 	      console.log("Saliendo");
 	    }, function(error) {
 	      alert( "ERROR: "+ error);
@@ -55,7 +55,7 @@ app.controller("loginGeoindoor",['$scope', '$compile', 'GMapService', 'AnyplaceS
 	}*/
 		window.onload = function() {
 			if (!firebase.auth().currentUser) {
-				location.href ="/architect/login.html";
+				location.href ="/geoindoor-page/architect/login.html";
 			}
 		}
 		
