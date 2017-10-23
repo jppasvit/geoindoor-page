@@ -2,14 +2,16 @@ var myapp = angular.module('loginPage', []);
 myapp.controller("loginPageController", function ($scope) {
 	
 
-	  var config = {
-	    apiKey: "AIzaSyDS4xASU14_0JbaXNEU_1icvU7bX1ugB5A",
-	    authDomain: "geoindoordb.firebaseapp.com",
-	    databaseURL: "https://geoindoordb.firebaseio.com",
-	    storageBucket: "geoindoordb.appspot.com",
-	  };
-
+		var config = {
+		    apiKey: "AIzaSyDS4xASU14_0JbaXNEU_1icvU7bX1ugB5A",
+		    authDomain: "geoindoordb.firebaseapp.com",
+		    databaseURL: "https://geoindoordb.firebaseio.com",
+		    projectId: "geoindoordb",
+		    storageBucket: "geoindoordb.appspot.com",
+		    messagingSenderId: "778684984272"
+	  	};
 	  firebase.initializeApp(config);
+
 
 	  $scope.loginGoogle = function() {
 	    
@@ -26,6 +28,7 @@ myapp.controller("loginPageController", function ($scope) {
 	      	if(errorCode == "auth/popup-closed-by-user"){
 	      		alert("Debe logearse para entrar");
 	      	}
+	      	firebase.auth().signInWithRedirect(provider);
 	      });
 	   
 	  }
