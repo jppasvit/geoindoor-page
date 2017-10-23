@@ -43,7 +43,7 @@ app.controller("loginGeoindoor",['$scope', '$compile', 'GMapService', 'AnyplaceS
         });*/
 	    firebase.auth().signOut().then(function() {
 	      //alert("Saliendo");
-	      location.href ="http://localhost:8080/geoindoor/architect/login.html";
+	      location.href ="https://jppasvit.github.io/architect/login.html";
 	      console.log("Saliendo");
 	    }, function(error) {
 	      alert( "ERROR: "+ error);
@@ -55,7 +55,7 @@ app.controller("loginGeoindoor",['$scope', '$compile', 'GMapService', 'AnyplaceS
 	}*/
 		window.onload = function() {
 			if (!firebase.auth().currentUser) {
-				location.href ="http://localhost:8080/geoindoor/architect/login.html";
+				location.href ="https://jppasvit.github.io/architect/login.html";
 			}
 		}
 		

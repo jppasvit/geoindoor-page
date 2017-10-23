@@ -3042,7 +3042,7 @@ app.controller("MyDraw",['$scope', '$compile', 'GMapService', 'AnyplaceService',
 		return $http({
 
 		    method: 'POST',
-		    url: "https://geoindoorapi.herokuapp.com/Rutas/Edificio",
+		    url: "https://geoindoorapi.herokuapp.com/Rutas/EdificioArchitect",
 		    headers: {'Content-Type': 'application/x-www-form-urlencoded'},
 		    transformRequest: function(obj) {
 		        var str = [];
@@ -5255,7 +5255,7 @@ app.controller("loginGeoindoor",['$scope', '$compile', 'GMapService', 'AnyplaceS
         });*/
 	    firebase.auth().signOut().then(function() {
 	      //alert("Saliendo");
-	      location.href ="http://localhost:8080/geoindoor/architect/login.html";
+	      location.href ="https://jppasvit.github.io/architect/login.html";
 	      console.log("Saliendo");
 	    }, function(error) {
 	      alert( "ERROR: "+ error);
@@ -5267,7 +5267,7 @@ app.controller("loginGeoindoor",['$scope', '$compile', 'GMapService', 'AnyplaceS
 	}*/
 		window.onload = function() {
 			if (!firebase.auth().currentUser) {
-				location.href ="http://localhost:8080/geoindoor/architect/login.html";
+				location.href ="https://jppasvit.github.io/architect/login.html";
 			}
 		}
 		
@@ -5295,7 +5295,7 @@ myapp.controller("loginPageController", function ($scope) {
 	        var token = result.credential.accesstoken;
 	        var user = result.user;
 	        var name = result.user.displayName;
-	        location.href ="http://localhost:8080/geoindoor/architect/";  
+	        location.href ="https://jppasvit.github.io/architect/";  
 	      }).catch(function(error) {
 	      	var errorCode = error.code;
   			var errorMessage = error.message;
@@ -5307,7 +5307,7 @@ myapp.controller("loginPageController", function ($scope) {
 	  }
 
 	  if(firebase.auth().currentUser){
-	  	location.href ="http://localhost:8080/geoindoor/architect/";
+	  	location.href ="https://jppasvit.github.io/architect/";
 	  }
 	
 	
