@@ -67,7 +67,6 @@
                 var signinCallback = function (authResult) {
                     var $element = $('#control-bar');
                     var scope = angular.element($element).scope();
-                    authResult
                     scope.signinCallback(authResult);
                 };
             </script>
@@ -79,8 +78,7 @@
                             class="g-signin"
                             data-callback="signinCallback"
                             data-clientid="587500723971-si8s4qqat9v5efgemnebihpi3qe9onlp.apps.googleusercontent.com"
-                            data-cookiepolicy="https://jppasvit.github.io"
-                            data-origin="localhost"
+                            data-cookiepolicy="single_host_origin"
                             data-scope="profile"
                             data-width="wide"
                             data-height="tall">

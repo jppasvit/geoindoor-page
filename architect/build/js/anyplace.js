@@ -675,6 +675,8 @@ AnyplaceAPI.Mapping.SIGN_URL = AnyplaceAPI.FULL_SERVER + AnyplaceAPI.Mapping.SIG
     };
 
     apiService.signAccount = function (json_req) {
+        console.log("EPAAAAAAAAAAAAAAAA");
+        console.log(json_req);
         return $http({
             method: "POST",
             url: AnyplaceAPI.Mapping.SIGN_URL,
