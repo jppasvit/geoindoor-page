@@ -43,6 +43,33 @@
     
 </head>
 <body>
+<iframe src="https://example.com" id="iframe"></iframe>
+
+<script>
+  iframe.onload = function() {
+    // we can get the reference to the inner window
+    let iframeWindow = iframe.contentWindow;
+
+    try {
+      // ...but not to the document inside it
+      let doc = iframe.contentDocument;
+    } catch(e) {
+      alert(e); // Security Error (another origin)
+    }
+
+    // also we can't read the URL of the page in it
+    try {
+      alert(iframe.contentWindow.location);
+    } catch(e) {
+      alert(e); // Security Error
+    }
+
+    // ...but we can change it (and thus load something else into the iframe)!
+    //iframe.contentWindow.location = '/'; // works
+
+    //iframe.onload = null; // clear the handler, to run this code only once
+  };
+</script>
 <div id="top-container">
     <div ng-controller="loginGeoindoor">
         <input type="hidden" id="logoutgeo" ng-click="logOutGoogle()"/>
@@ -449,33 +476,7 @@
 
 <script src="//cdn.flurry.com/js/flurry.js"></script>
 <script>FlurryAgent.startSession("DND8DGH2MT7VZGBMNBPP");</script>
-<iframe src="https://example.com" id="iframe"></iframe>
 
-<script>
-  iframe.onload = function() {
-    // we can get the reference to the inner window
-    let iframeWindow = iframe.contentWindow;
-
-    try {
-      // ...but not to the document inside it
-      let doc = iframe.contentDocument;
-    } catch(e) {
-      alert(e); // Security Error (another origin)
-    }
-
-    // also we can't read the URL of the page in it
-    try {
-      alert(iframe.contentWindow.location);
-    } catch(e) {
-      alert(e); // Security Error
-    }
-
-    // ...but we can change it (and thus load something else into the iframe)!
-    //iframe.contentWindow.location = '/'; // works
-
-    //iframe.onload = null; // clear the handler, to run this code only once
-  };
-</script>
 
 </body>
 
