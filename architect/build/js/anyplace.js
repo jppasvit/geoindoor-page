@@ -2906,7 +2906,7 @@ app.controller('ControlBarController', ['$scope', '$rootScope', 'AnyplaceService
             $scope.setAuthenticated(true);
             $scope.gAuth = authResult;
 
-            app.access_token = authResult.access_token;
+            app.access_token = authResult.id_token;
 
             gapi.client.load('plus', 'v1', apiClientLoaded);
 
