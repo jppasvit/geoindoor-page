@@ -2911,6 +2911,7 @@ app.controller('ControlBarController', ['$scope', '$rootScope', 'AnyplaceService
             gapi.client.load('plus', 'v1', apiClientLoaded);
 
         } else {
+            $scope.setAuthenticated(true);
             // Update the app to reflect a signed out user
             // Possible error values:
             //   "user_signed_out" - User is signed-out
